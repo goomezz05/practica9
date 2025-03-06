@@ -23,3 +23,4 @@ async function fetchPokemon() {
         console.error('Error al obtener los Pokémon:', error);
     }
 }
+ 

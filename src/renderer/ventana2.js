@@ -39,7 +39,7 @@ async function analizarPokemon() {
         html += "</table>";
         document.getElementById('analisisdata').innerHTML = html;
 
-    } catch (error) {
+    } catch (error) { 
         console.error("Error al analizar el Pokémon:", error.message);
         document.getElementById('analisisdata').innerText = "Error al analizar el Pokémon.";
     }

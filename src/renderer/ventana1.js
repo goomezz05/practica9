@@ -48,3 +48,4 @@ async function fetchPokemon() {
         document.getElementById('pokemonInfo').innerText = "";
     }
 }
+ 
