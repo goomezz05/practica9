@@ -1,6 +1,6 @@
-const { contextBridge } = require('electron');
+const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
-    saludo: () => console.log('Hola desde Preload!')
+    buscarPokemon: async (nombre) => await ipcRenderer.invoke('buscar-pokemon', nombre),
+    abrirVentanaDetalles: (datos) => ipcRenderer.send('abrir-ventana-detalles', datos)
 });
- 
